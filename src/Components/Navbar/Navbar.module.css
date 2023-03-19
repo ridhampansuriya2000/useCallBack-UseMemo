@@ -1,0 +1,25 @@
+.Buttons{
+    margin: 20px 0px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.Buttons > div{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-size: large;
+    width: max-content;
+    height: 30px;
+    color: aliceblue;
+    border-radius: 10px;
+    background: darkgray;
+    cursor: pointer;
+}
+
+.Buttons > div:hover{
+    background: #3b3a2a;
+}
