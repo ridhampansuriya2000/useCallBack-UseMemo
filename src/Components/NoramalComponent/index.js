@@ -4,9 +4,6 @@ import './NoramlComponent.css';
 const NormalComponent = (props) => {
     const [state, setState] = React.useState(0);
     React.useEffect(()=>{
-        props.setRenderComponents((preState)=>[...preState,'Normal Component']);
-    },[]);
-    React.useEffect(()=>{
         console.log("Normal Component render ",props);
     },[props]);
 

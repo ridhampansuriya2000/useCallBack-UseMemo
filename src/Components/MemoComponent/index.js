@@ -4,9 +4,6 @@ import './MemoComponent.css'
 const MemoComponent = (props) =>{
     const [state,setState] = React.useState(0);
 
-
-
-
     React.useEffect(()=>{
         console.log("Memo Component Props", props);
     },[props]);
