@@ -18,11 +18,10 @@ function App() {
             <Navbar/>
             <Routes>
                 <Route path="/" element={<MemoExample />} />
-                <Route path="/useEffectExample" element={<UseCallBackExample />} />
+                <Route path="/useCallBackExample" element={<UseCallBackExample />} />
                 <Route path="/useMemoExample" element={<UseMemoExample />} />
             </Routes>
         </Router>
-      {/*<MemoExample />*/}
     </div>
   );
 }

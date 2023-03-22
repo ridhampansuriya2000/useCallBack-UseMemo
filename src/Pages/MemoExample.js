@@ -30,13 +30,15 @@ const MemoExample = () => {
                 value={value}
                 counter2={counter2}
             />
-
-            <h3>Note :</h3> Normally if parent component state or props update then child component also re-render but
-            by using memo if any props or state is not update then that component not re render.
-            => Ex : in our case we have two counters (counter 1 & counter 2) and two child components(normal component &
-            memo/pure component) counter 2's value passed in both child component but counter 1 value not passed in any
-            child component.
-            if we increment counter 1 values then normal component re-render but memo(pure) component will not re-render.
+            <div style={{padding: '0px 26px', textAlign: "left"}}>
+                <h3>Note :</h3>(1) Normally if parent component state or props update then child component also re-render but
+                by using memo if any props or state is not update then that component not re render.<br/>
+                => Ex : in our case we have two counters (counter 1 & counter 2) and two child components(normal component &
+                memo/pure component) counter 2's value passed in both child component but counter 1 value not passed in any
+                child component.
+                if we increment counter 1 values then normal component re-render but memo(pure) component will not re-render.
+                <br/><br/>
+            </div>
         </div>
     )
 }

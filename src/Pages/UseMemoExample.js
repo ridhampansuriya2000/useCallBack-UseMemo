@@ -1,39 +1,22 @@
-import React from "react";
+import React, {memo} from "react";
 import UseMemoComponent from "../Components/UseMemo/UseMemoComponent";
 import NormalMemoComponent from "../Components/UseMemo/NormalMemoComponent";
 
-const UseMemoExample = () =>{
+const UseMemoExample = () => {
 
     const [counter1, setCounter1] = React.useState(0);
-    const [value, setValue] = React.useState('');
-
-    const valueHandler = (val) => {
-        setValue(() => val);
-    };
-
-    const newValueHandler = React.useCallback((val)=>{
-        setValue(()=>val);
-    },[value]);
-
     console.log("MemoExample")
 
-
-    return(
+    return (
         <div>
             <div>Counter 1 count is <b>{counter1}</b></div>
-            <button onClick={()=> setCounter1((count) => count + 1)}> Increment </button>
+            <button onClick={() => setCounter1((count) => count + 1)}> Increment</button>
 
-            <NormalMemoComponent
-                value={value}
-                valueHandler={valueHandler}
-            />
+            <NormalMemoComponent/>
 
-            <UseMemoComponent
-                value={value}
-                valueHandler={newValueHandler}
-            />
+            <UseMemoComponent/>
         </div>
     )
 }
 
-export default UseMemoExample;
+export default memo(UseMemoExample);

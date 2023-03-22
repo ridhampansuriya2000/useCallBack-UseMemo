@@ -9,11 +9,11 @@ const expensiveCalculation = (num) => {
     return num;
 };
 
-const UseMemoComponent = (props) =>{
+const UseMemoComponent = () =>{
 
     const [count, setCount] = React.useState(0);
     const [value, setValue] = React.useState([]);
-    // const calculation = expensiveCalculation(count);
+
     const calculation = React.useMemo(() => expensiveCalculation(count), [count]);
 
     const increment = () => {
