@@ -24,7 +24,7 @@ const UseMemoComponent = () =>{
         <div className='UseMemoComponent'>
             <h3>With using UseMemo</h3>
             <div>Value : <b>{value}</b></div>
-            <div><input value={value} onChange={(e)=> setValue(e.target.value)}/></div>
+            <div><input  value={value} onChange={(e)=> setValue( e.target.value.replace(/[^0-9]/g, ''))}/></div>
 
             <hr/><hr/><hr/><hr/>
             <div>
